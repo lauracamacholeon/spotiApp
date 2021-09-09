@@ -1,0 +1,12 @@
+<div class="card-columns mt-3 animated fadeIn">
+    <div (click)=verArtista(item) *ngFor="let item of items; let i=index" class="card bg-dark border-warning puntero">
+        <img *ngIf="item.images.length >=1" [src]="item.images[0].url" class="card-img-top" alt="...">
+        <img *ngIf="item.images.length == 0" src="../../../assets/img/noimage.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-white">{{ item.name |slice:0:15}}</h5>
+            <p class="card-text"><span *ngFor="let artista of item.artists" class="badge badge-warning">{{ artista.name }}</span></p>
+            <p *ngIf="item.followers" class="card-text"><span class="badge badge-warning">Followers: {{ item.followers.total | number}}</span></p>
+        </div>
+    </div>
+
+</div>

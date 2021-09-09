@@ -1,0 +1,23 @@
+<div class="row mt-3">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control bg-dark border-warning text-light" style="border-radius: 20px;" placeholder="Buscar artista">
+    </div>
+</div>
+<!-- 
+<div class="card-columns mt-3 ">
+    <div *ngFor="let buscar of busqueda; let i=index" class="card bg-dark border-warning">
+        <img *ngIf="buscar.images.length >=1" [src]="buscar.images[0].url" class="card-img-top" alt="...">
+        <img *ngIf="buscar.images.length == 0" src="../../../assets/img/noimage.png" class="card-img-top" alt="...">
+
+
+
+        <div class="card-body">
+            <h5 class="card-title text-white">{{ buscar.name |slice:0:15}}</h5>
+            <p class="card-text"><span class="badge badge-warning">Followers: {{ buscar.followers.total | number}}</span></p>
+             <p *ngFor="let generos of buscar.genres" class="card-text"><span class="badge badge-warning">Genres: {{ generos }}</span></p> -->
+<!-- </div> -->
+<!-- </div> -->
+
+<!-- </div> -->
+<!-- <app-loading></app-loading> -->
+<app-target [items]="busqueda"></app-target>
